@@ -9,38 +9,35 @@ function App() {
   const projects = [
     {
       id: 1,
-      title: 'Kalaa-1.0.0',
+      title: 'Python Train Project',
       description:
-        'Kalaa 1.0.0 is a full-stack e-commerce platform designed for artists to showcase and sell their artwork online. Built with a React.js frontend and a Node.js/Express backend, it features a RESTful API, user authentication, and dynamic product management.',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Bootstrap'],
-      githubLink: 'https://github.com/ISHA0i/Kalaa-1.0.0.git',
+        'Built a Python-based system to process and categorize train-related data, emphasizing automation and clean data pipelines.',
+      technologies: ['Python'],
+      githubLink: 'https://github.com/SunrutNariya/Python_train.git',
     },
     {
-      title: 'Cybersecurity Audit Form Application',
+      id: 2,
+      title: 'Flask Log Management System',
       description:
-        'A full-stack web application designed to facilitate the creation, submission, and management of cybersecurity audits. It features a multi-step form with validation, a submissions dashboard, and a RESTful API for CRUD operations.',
-      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'CSS', 'Vite'],
-      githubLink: 'https://github.com/ISHA0i/Audit-Form.git',
+        'Designed a logs management web app using Flask with routing, Jinja templates, and SQL database integration to query and visualize logs.',
+      technologies: ['Python', 'Flask', 'SQLite'],
+      githubLink: 'https://github.com/SunrutNariya/fask_project_log_managment.git',
     },
     {
-      title: 'Random Schedule Generator',
+      id: 3,
+      title: 'Face Detection Project',
       description:
-        'A web-based tool that automatically generates optimal class schedules based on course selections. Users can input their chosen courses, and the application efficiently creates a conflict-free timetable tailored to their preferences.',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Bootstrap'],
-      live: 'https://random-schedule-generator.onrender.com',
+        'Implemented a face detection system using OpenCV, focusing on real-time detection and preprocessing techniques.',
+      technologies: ['Python', 'OpenCV'],
+      githubLink: 'https://github.com/SunrutNariya/opencv_face-detection.git',
     },
     {
-      title: 'Google Cloud Skills Boost Profile',
+      id: 4,
+      title: 'Easy Name Generator',
       description:
-        'A verified public profile showcasing completed hands-on labs and skill badges on Google Cloud Platform, covering topics like Compute Engine, Cloud Storage, BigQuery, and more.',
-      technologies: [
-        'Google Cloud Platform',
-        'Compute Engine',
-        'Cloud Storage',
-        'BigQuery',
-        'Cloud Functions',
-      ],
-      link: 'https://www.cloudskillsboost.google/public_profiles/8fc0f2f3-6883-437c-af42-91cef81f84cc',
+        'Created a generator that produces human-friendly names for apps and projects using simple language models and grammar rules.',
+      technologies: ['Python'],
+      githubLink: 'https://github.com/SunrutNariya/name_generator_easily.git',
     },
   ];
 
@@ -56,30 +53,20 @@ function App() {
           <Container>
             <Row className="justify-content-center text-center">
               <Col md={8}>
+                <img
+                  src={process.env.PUBLIC_URL + '/profile.jpg'}
+                  alt="Shunrut Nariya"
+                  className="rounded-circle mb-4"
+                  style={{ width: '140px', height: '140px', objectFit: 'cover' }}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
                 <h1 className="display-4 fw-bold mb-4">
-                  Hi, I'm <span className="text-primary">ISHA</span>
+                  Hi, I'm <span className="text-primary">SHUNRUT</span>
                 </h1>
                 <p className="lead mb-4">
-                  {/* A passionate <strong>Full-Stack Web Developer</strong> skilled in building real-world,
-  scalable applications using <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, <strong>MySQL</strong>, and <strong>Bootstrap</strong>.<br /><br />
-  I've developed production-ready projects like:<br />
-  🎨 <a href="https://github.com/ISHA0i/Kalaa-1.0.0.git" target="_blank" rel="noopener noreferrer"><strong>Kalaa</strong></a> – an e-commerce platform for artists<br />
-  🛡️ <a href="https://github.com/ISHA0i/Audit-Form.git" target="_blank" rel="noopener noreferrer"><strong>Audit Form App</strong></a> – a multi-step cybersecurity audit platform<br />
-  📅 <a href="https://github.com/ISHA0i/Random-Schedule-Generator.git" target="_blank" rel="noopener noreferrer"><strong>Schedule Generator</strong></a> – a smart timetable planner<br /><br />
-  I also hold hands-on experience with <strong>Google Cloud Platform</strong>, earning badges in <strong>Compute Engine</strong>, <strong>BigQuery</strong>, and more via real labs.<br /><br />
-  Curious, consistent, and code-driven — I turn ideas into user-centric solutions. */}
-                  I'm a passionate <strong>Full-Stack Web Developer</strong>{' '}
-                  with expertise in <strong>React.js</strong>,{' '}
-                  <strong>Node.js</strong>, <strong>MongoDB</strong>, 
-                  <strong> MySql</strong>, and <strong>Google Cloud</strong>. I
-                  specialize in building scalable, real-world applications that
-                  provide efficient solutions for users. Some of the projects
-                  I've worked on that's shown below. In addition to web
-                  development, I have hands-on experience with{' '}
-                  <strong>Google Cloud Platform</strong>, where I've earned
-                  badges in areas like <strong>Compute Engine</strong> and{' '}
-                  <strong>BigQuery</strong>, further enhancing my ability to
-                  build cloud-native applications.
+                  Enthusiastic and dedicated AI fresher with a solid foundation in programming, software development, and problem-solving. Skilled in Python, Flask, OpenCV, SQL, and data analysis. Passionate about building scalable and user-focused solutions with strong communication and adaptability.
                 </p>
               </Col>
             </Row>
@@ -91,62 +78,63 @@ function App() {
           <Container>
             <h2 className="text-center mb-5">My Projects</h2>
             <Row className="justify-content-center">
-              {projects.map((project) => (
+              {projects.map((project, idx) => (
                 <Col lg={6} key={project.id} className="mb-4">
-                  <Card className={`project-card project-${getProjectTheme(project.title)}`}>
+                  <Card className="project-card">
                     <Card.Body className="p-4">
-                      <Card.Title className="h3 mb-3">
-                        {project.title}
-                      </Card.Title>
-                      <Card.Text className="text-muted mb-4">
-                        {project.description}
-                      </Card.Text>
-                      <div className="badge-container">
-                        {project.technologies.map((tech, index) => (
-                          <span
-                            key={index}
-                            className="badge me-2 mb-2"
-                          >
-                            {tech}
+                      <div className="project-content">
+                        <div className="project-icon-wrapper">
+                          <span className="project-icon-bg">
+                            {getProjectIcon(project.title)}
                           </span>
-                        ))}
-                      </div>
-                      {project.githubLink ? (
-                        <div className="">
-                          <Card.Link
-                            href={project.githubLink}
-                            target="_blank"
-                            className="card-link"
-                          >
-                            View on GitHub
-                          </Card.Link>
+                        </div>
+                        <Card.Title className="project-title" title={project.title}>
+                          {project.title}
+                        </Card.Title>
+                        <Card.Text className="project-desc">
+                          {project.description}
+                        </Card.Text>
+                        <div className="tech-stack">
+                          <h6 className="tech-title">Technologies Used</h6>
+                          <div className="badge-container">
+                            {project.technologies.map((tech, index) => (
+                              <span
+                                key={index}
+                                className="tech-badge"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="project-actions">
+                          {project.githubLink && (
+                            <Card.Link
+                              href={project.githubLink}
+                              target="_blank"
+                              className="action-button primary-button"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                              </svg>
+                              View Project
+                            </Card.Link>
+                          )}
                           {project.live && (
                             <Card.Link
                               href={project.live}
                               target="_blank"
-                              className="card-link"
+                              className="action-button secondary-button"
                             >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                              </svg>
                               Live Demo
                             </Card.Link>
                           )}
                         </div>
-                      ) : project.live ? (
-                        <Card.Link
-                          href={project.live}
-                          target="_blank"
-                          className="card-link"
-                        >
-                          Live Demo
-                        </Card.Link>
-                      ) : (
-                        <Card.Link
-                          href={project.link}
-                          target="_blank"
-                          className="card-link"
-                        >
-                          View Achievement
-                        </Card.Link>
-                      )}
+                      </div>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -167,6 +155,16 @@ function getProjectTheme(title) {
   if (titleLower.includes('schedule')) return 'schedule';
   if (titleLower.includes('cloud')) return 'cloud';
   return 'default';
+}
+
+function getProjectIcon(title) {
+  const t = title.toLowerCase();
+  if (t.includes('python')) return '🐍';
+  if (t.includes('flask')) return '🧪';
+  if (t.includes('face')) return '👤';
+  if (t.includes('name')) return '🔤';
+  if (t.includes('cloud')) return '☁️';
+  return '📦';
 }
 
 export default App;

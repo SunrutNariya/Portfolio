@@ -9,7 +9,7 @@ const Footer = () => {
       <Container className="text-center">
         <div className="mb-4 social-icons d-flex justify-content-center align-items-center gap-4">
           <a
-            href="https://github.com/ISHA0i"
+            href="https://github.com/SunrutNariya"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -18,7 +18,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://www.linkedin.com/in/isha-chovatiya-4a6194289"
+            href="https://www.linkedin.com/in/sunrut-nariya-590447242"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -27,7 +27,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
-            href="mailto:ishachovatiya9192@gmail.com"
+            href="mailto:sunrutnariya@gmail.com"
             className="social-link"
             title="Email Me"
           >

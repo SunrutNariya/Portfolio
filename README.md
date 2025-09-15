@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Shunrut Nariya - Portfolio
+
+This is the source code for **Shunrut Nariya's** developer portfolio, built with React and Bootstrap. It showcases projects, skills, and links to social profiles.
+
+## Getting Started
+
+Place your profile photo at `public/profile.jpg`. It will be displayed on the homepage automatically. Recommended size ~ 300x300.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
