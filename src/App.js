@@ -55,7 +55,7 @@ function App() {
               <Col md={8}>
                 <img
                   src={process.env.PUBLIC_URL + '/profile.jpg'}
-                  alt="Shunrut Nariya"
+                  alt="Sunrut Nariya"
                   className="rounded-circle mb-4"
                   style={{ width: '140px', height: '140px', objectFit: 'cover' }}
                   onError={(e) => {
@@ -63,7 +63,7 @@ function App() {
                   }}
                 />
                 <h1 className="display-4 fw-bold mb-4">
-                  Hi, I'm <span className="text-primary">SHUNRUT</span>
+                  Hi, I'm <span className="text-primary">SUNRUT NARIYA</span>
                 </h1>
                 <p className="lead mb-4">
                   Enthusiastic and dedicated AI fresher with a solid foundation in programming, software development, and problem-solving. Skilled in Python, Flask, OpenCV, SQL, and data analysis. Passionate about building scalable and user-focused solutions with strong communication and adaptability.
